@@ -31,10 +31,11 @@ Elle permet de :
 ##  Installation et exécution
 
 ### Cloner le projet
+
 ```bash
 git clone https://github.com/salah02/altenshop.git
 cd altenshop
-
+```
 ### Lancer le back-end (.NET API)
 cd back/AltenShop.Api
 dotnet restore
