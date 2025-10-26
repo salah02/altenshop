@@ -1,0 +1,46 @@
+<div class="p-card p-4 max-w-lg mx-auto mt-10 shadow-md rounded-xl bg-white">
+    <h2 class="text-2xl font-bold mb-4 text-center">Contactez-nous</h2>
+  
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+      <div class="mb-4">
+        <label for="email" class="block mb-2 font-semibold">Email</label>
+        <input
+          id="email"
+          type="email"
+          pInputText
+          formControlName="email"
+          placeholder="Votre email"
+          class="w-full"
+        />
+        <small *ngIf="email?.invalid && email?.touched" class="text-red-500">
+          Veuillez entrer un email valide.
+        </small>
+      </div>
+  
+      <div class="mb-4">
+        <label for="message" class="block mb-2 font-semibold">Message</label>
+        <textarea
+          id="message"
+          rows="5"
+          pInputTextarea
+          formControlName="message"
+          placeholder="Votre message (max 300 caractères)"
+          class="w-full"
+        ></textarea>
+        <small *ngIf="message?.invalid && message?.touched" class="text-red-500">
+          Message requis (max 300 caractères).
+        </small>
+      </div>
+  
+      <button
+        type="submit"
+        pButton
+        label="Envoyer"
+        class="w-full"
+        [disabled]="contactForm.invalid"
+      ></button>
+    </form>
+  
+    <p-toast></p-toast>
+  </div>
+  

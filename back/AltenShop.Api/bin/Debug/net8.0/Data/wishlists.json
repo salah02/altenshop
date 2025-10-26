@@ -1,0 +1,56 @@
+{
+  "admin@admin.com": [],
+  "john@doe.com": [
+    {
+      "Id": 1,
+      "Code": "",
+      "Name": "teeop",
+      "Description": "nn",
+      "Image": "",
+      "Category": "Clothing",
+      "Price": 3,
+      "Quantity": 5,
+      "InternalReference": "",
+      "ShellId": 0,
+      "InventoryStatus": "INSTOCK",
+      "Rating": 0,
+      "CreatedAt": "2025-10-25T19:30:17.235Z",
+      "UpdatedAt": "2025-10-25T19:30:17.235Z"
+    },
+    {
+      "Id": 2,
+      "Code": "",
+      "Name": "Laptop Dell XPS",
+      "Description": "mm",
+      "Image": "",
+      "Category": "Electronics",
+      "Price": 33,
+      "Quantity": 0,
+      "InternalReference": "",
+      "ShellId": 0,
+      "InventoryStatus": "INSTOCK",
+      "Rating": 0,
+      "CreatedAt": "2025-10-25T19:48:36.458Z",
+      "UpdatedAt": "2025-10-25T19:48:36.458Z"
+    }
+  ],
+  "User1@user.com": [
+    {
+      "Id": 1,
+      "Code": "",
+      "Name": "teeop",
+      "Description": "nn",
+      "Image": "",
+      "Category": "Clothing",
+      "Price": 3,
+      "Quantity": 5,
+      "InternalReference": "",
+      "ShellId": 0,
+      "InventoryStatus": "INSTOCK",
+      "Rating": 0,
+      "CreatedAt": "2025-10-25T19:30:17.235Z",
+      "UpdatedAt": "2025-10-25T19:30:17.235Z"
+    }
+  ],
+  "salah@gmail.com": []
+}

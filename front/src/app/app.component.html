@@ -1,0 +1,63 @@
+<p-toolbar [style]="{ height: '100px' }">
+  <div class="p-toolbar-group-start flex items-center gap-2">
+    <img src="assets/icons/icon-72x72.png" alt="logo" />
+  </div>
+
+  <div class="p-toolbar-group-center text-xl font-semibold">
+    {{ title }}
+  </div>
+
+  <div class="p-toolbar-group-end flex items-center gap-4">
+
+    <div
+      class="relative cursor-pointer"
+      (click)="goToWishlist()"
+      pTooltip="Voir ma liste d’envies"
+      tooltipPosition="bottom"
+    >
+      <i class="pi pi-heart text-2xl text-pink-500"></i>
+
+      @if (wishlistService.wishlist().length > 0) {
+        <span
+          class="p-badge p-badge-info"
+          style="font-size: 0.6rem; padding: 0.2em 0.4em; position: absolute; bottom: 10px; left: -10px;"
+        >
+          {{ wishlistService.wishlist().length }}
+        </span>
+      }
+    </div>
+
+    <div
+      class="relative cursor-pointer"
+      (click)="goToCart()"
+      pTooltip="Voir mon panier"
+      tooltipPosition="bottom"
+    >
+      <i class="pi pi-shopping-cart text-2xl"></i>
+
+      @if (cartService.items().length > 0) {
+        <span
+          class="p-badge p-badge-success"
+          style="font-size: 0.6rem; padding: 0.2em 0.4em; position: absolute; bottom: 10px; left: -10px;"
+        >
+          {{ cartService.items().length }}
+        </span>
+      }
+    </div>
+  </div>
+</p-toolbar>
+
+<!-- Splitter principal -->
+<p-splitter [panelSizes]="[20, 80]" [style]="{ height: 'calc(100vh - 100px)' }">
+  <ng-template pTemplate>
+    <div class="w-full">
+      <app-panel-menu />
+    </div>
+  </ng-template>
+
+  <ng-template pTemplate>
+    <div class="w-full app-content">
+      <router-outlet></router-outlet>
+    </div>
+  </ng-template>
+</p-splitter>
