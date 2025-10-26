@@ -37,12 +37,12 @@ git clone https://github.com/salah02/altenshop.git
 cd altenshop
 ```
 ### Lancer le back-end (.NET API)
-cd back/AltenShop.Api
-dotnet restore
-dotnet run
+- cd back/AltenShop.Api
+- dotnet restore
+- dotnet run
 
 ### Lancer le front-end (Angular)
-cd front
-npm install
-npm start
+- cd front
+- npm install
+- npm start
 
